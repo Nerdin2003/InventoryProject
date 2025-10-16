@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 namespace InventoryAPI.Models
 {
     public class Item
