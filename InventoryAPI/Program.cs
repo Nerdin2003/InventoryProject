@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+using InventoryAPI.Data; // or wherever InventoryContext is defined
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,8 +14,8 @@ builder.Services.AddControllers();
 builder.Services.AddCors(options => 
     options.AddPolicy("AllowAllOrigins",
     builder => {
-        builder.AllowAllOrigins()
-        .AllowAnyMethod();
+        builder.AllowAnyOrigins()
+        .AllowAnyMethod()
         .AllowAnyHeader();
     }
     )
