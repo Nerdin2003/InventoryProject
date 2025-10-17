@@ -37,8 +37,10 @@ async function addItem() {
     fetchItems();
 }
 
-async function deleteItem(id) {
-    //implement delete func
+async function deleteItem(id) { 
+    await fetch(`${apiUrl}/${id}`, {method: 'DELETE'});
+
+    fetchItems();
 }
 
 window.onload = fetchItems; 

@@ -55,7 +55,7 @@ namespace InventoryAPI.Controllers
       }
     }
 
-    [HttpDelete("Id")]
+    [HttpDelete("{Id}")]
     public async Task<IActionResult> Delete(int Id)
     {
       var item = await _context.Items.FindAsync(Id);
